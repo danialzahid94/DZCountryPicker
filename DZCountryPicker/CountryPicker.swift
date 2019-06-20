@@ -13,16 +13,34 @@ protocol CountryPickerDelegate {
 }
 
 class CountryPicker: NSObject {
-    
+    //MARK: - Private variables
     fileprivate var countries = [Country]()
-    fileprivate var delegate: CountryPickerDelegate?
+
+    //MARK: - Public variables
+    public var delegate: CountryPickerDelegate?
     
+    /*
+     The UIPickerView object used to present the countries list.
+     The pickerView settings and appearance can be modified by accessing it directly.
+     */
     public let pickerView = UIPickerView()
     
+    /*
+     The font used for the text in the pickerView.
+     Can be passed any custom font from here.
+     */
     public var font : UIFont = UIFont.systemFont(ofSize: 15.0)
     
+    /*
+     The text color for the text in the pickerView.
+     Can be passed any custom UIColor.
+     */
     public var textColor : UIColor = .black
     
+    /*
+     The selected country object. Can be used to access different properties
+     of the selected country.
+     */
     public var selectedCountry : Country? {
         didSet {
             guard let country = selectedCountry else { return }
@@ -31,6 +49,10 @@ class CountryPicker: NSObject {
         }
     }
     
+    /*
+     Assign the text field to this object on which the country picker
+     needs to be shown.
+     */
     public var textField : UITextField? {
         didSet {
             textField?.inputView = pickerView
@@ -38,6 +60,8 @@ class CountryPicker: NSObject {
             createToolbar()
         }
     }
+    
+    //MARK: - Setup Methods
     
     override init() {
         super.init()
@@ -90,6 +114,8 @@ class CountryPicker: NSObject {
     func didSelectCountry(country: Country) {
         selectedCountry = country
     }
+    
+    //MARK: -
 }
 
 extension CountryPicker: UIPickerViewDelegate, UIPickerViewDataSource {
