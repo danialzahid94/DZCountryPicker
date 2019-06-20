@@ -12,6 +12,8 @@
 		69A3FB0E22BB8BD200781EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A3FB0C22BB8BD200781EB1 /* Main.storyboard */; };
 		69A3FB1022BB8BD300781EB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A3FB0F22BB8BD300781EB1 /* Assets.xcassets */; };
 		69A3FB1322BB8BD300781EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A3FB1122BB8BD300781EB1 /* LaunchScreen.storyboard */; };
+		69A3FB1D22BB945B00781EB1 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3FB1B22BB945B00781EB1 /* CountryPicker.swift */; };
+		69A3FB1E22BB945B00781EB1 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3FB1C22BB945B00781EB1 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		69A3FB0F22BB8BD300781EB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69A3FB1222BB8BD300781EB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69A3FB1422BB8BD300781EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69A3FB1B22BB945B00781EB1 /* CountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
+		69A3FB1C22BB945B00781EB1 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		69A3FB0722BB8BD200781EB1 /* DZCountryPickerApp */ = {
 			isa = PBXGroup;
 			children = (
+				69A3FB1A22BB945B00781EB1 /* DZCountryPicker */,
 				69A3FB0822BB8BD200781EB1 /* AppDelegate.swift */,
 				69A3FB0A22BB8BD200781EB1 /* ViewController.swift */,
 				69A3FB0C22BB8BD200781EB1 /* Main.storyboard */,
@@ -63,6 +68,15 @@
 			);
 			path = DZCountryPickerApp;
 			sourceTree = "<group>";
+		};
+		69A3FB1A22BB945B00781EB1 /* DZCountryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				69A3FB1B22BB945B00781EB1 /* CountryPicker.swift */,
+				69A3FB1C22BB945B00781EB1 /* Country.swift */,
+			);
+			path = DZCountryPicker;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -135,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A3FB1E22BB945B00781EB1 /* Country.swift in Sources */,
 				69A3FB0B22BB8BD200781EB1 /* ViewController.swift in Sources */,
+				69A3FB1D22BB945B00781EB1 /* CountryPicker.swift in Sources */,
 				69A3FB0922BB8BD200781EB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

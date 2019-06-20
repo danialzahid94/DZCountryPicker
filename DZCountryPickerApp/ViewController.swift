@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var countryField: UITextField!
+    @IBOutlet weak var phoneField: UITextField!
+    
+    let countryPicker = CountryPicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        countryPicker.textField = countryField
     }
 
 
