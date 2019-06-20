@@ -35,6 +35,7 @@ class CountryPicker: NSObject {
         didSet {
             textField?.inputView = pickerView
             textField?.text = selectedCountry?.countryFlagAndCode()
+            createToolbar()
         }
     }
     
@@ -53,6 +54,26 @@ class CountryPicker: NSObject {
         if let currentRegion = Locale.current.regionCode {
             selectedCountry = Country(isoCode: currentRegion)
         }
+    }
+    
+    private func createToolbar() {
+        
+        guard let textField = textField else { return }
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(CountryPicker.dismissField))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([space, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        textField.inputAccessoryView = toolBar
+    }
+    
+    @objc func dismissField() {
+        textField?.resignFirstResponder()
     }
     
     private func populateCountryList() {
