@@ -15,10 +15,6 @@ It takes just one line of code to attach `DZCountryPicker` to a `UITextField`, a
 
 <p align="center"><img src="./sample.gif"/></p>
 
-Getting started
----------------
-
-LaunchDarkly supports multiple methods for installing the library in a project. Once installed, head over to the [SDK documentation](https://docs.launchdarkly.com/docs/ios-sdk-reference#section-getting-started) for complete instructions on getting started with using the SDK.
 
 Installation
 ------------
