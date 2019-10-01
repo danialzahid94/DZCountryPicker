@@ -136,7 +136,7 @@ extension CountryPicker: UIPickerViewDelegate, UIPickerViewDataSource {
         let label = UILabel()
         label.textColor = textColor
         label.font = font
-        label.text = countries[row].countryFlagAndName()
+        label.text = countries[row].countryFlagAndNameFormatted()
         return label
     }
 }
