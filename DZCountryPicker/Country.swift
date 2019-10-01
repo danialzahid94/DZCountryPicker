@@ -19,8 +19,12 @@ struct Country {
         phoneCode = Country.countryPhoneCode(from: isoCode)
     }
     
-    func countryFlagAndName() -> String {
+    func countryFlagAndNameFormatted() -> String {
         return "\t\t\(flagEmoji)\t \(name)"
+    }
+    
+    func countryFlagAndName() -> (String,String) {
+        return (flagEmoji,name)
     }
     
     func countryFlagAndCode() -> String {
